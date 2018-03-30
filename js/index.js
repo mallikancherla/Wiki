@@ -20,11 +20,12 @@ $(document).ready(function() {
         		var setHTML = '';
 
       			for(i=0;i<limi;i++){
+          setHTML +="<a href='https://en.wikipedia.org/wiki/ '"+ data.query.search[i].title + '>';
 					setHTML += "<div class='content'>";
-					setHTML += '<h4>'+data.query.search[i].title+'</h4>';
-					setHTML +='<p>'+data.query.search[i].snippet+'</p>';
-					setHTML +="<a href='https://en.wikipedia.org/wiki/" + data.query.search[i].title + "'></a>";
-					setHTML +='</div>';	
+					setHTML += '<h4 class="title">'+data.query.search[i].title+'</h4>';
+					setHTML +='<p class="snippet">'+data.query.search[i].snippet+'</p>';
+          setHTML +='</div>';	
+          setHTML +="</a>";
 					} //for
           $('#content').html(setHTML);
         }  );//end fun
